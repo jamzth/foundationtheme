@@ -4,7 +4,7 @@
 var $           = require('gulp-load-plugins')();
 var argv        = require('yargs').argv;
 var gulp        = require('gulp');
-var browserSync = require('browser-sync').create();
+//var browserSync = require('browser-sync').create();
 var merge       = require('merge-stream');
 var sequence    = require('run-sequence');
 var colors      = require('colors');
@@ -14,7 +14,7 @@ var cleanCSS    = require('gulp-clean-css');
 
 // Enter URL of your local server here
 // Example: 'http://localwebsite.dev'
-var URL = '';
+var URL = 'http://localhost:8888/clearwinds.net';
 
 // Check for --production flag
 var isProduction = !!(argv.production);
@@ -22,7 +22,7 @@ var isProduction = !!(argv.production);
 // Browsers to target when prefixing CSS.
 var COMPATIBILITY = [
   'last 2 versions',
-  'ie >= 9',
+  'ie >= 10',
   'Android >= 2.3'
 ];
 
