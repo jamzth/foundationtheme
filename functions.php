@@ -53,3 +53,67 @@ require_once( 'library/responsive-images.php' );
 
 /** If your site requires protocol relative url's for theme assets, uncomment the line below */
 // require_once( 'library/class-foundationpress-protocol-relative-theme-assets.php' );
+
+/** Add Customizer Options */
+function foundation_theme_customizer( $wp_customize ) {
+    //Custom Logo
+    $wp_customize->add_section( 'foundation_image_section' , array(
+        'title'       => __( 'Logo Image', 'foundation' ),
+        'priority'    => 30,
+        'description' => 'Upload an image as your logo',
+    ) );
+
+    $wp_customize->add_setting( 'foundation_image' );
+
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'foundation_image', array(
+        'label'    => __( 'Logo Image', 'foundation' ),
+        'section'  => 'foundation_image_section',
+        'settings' => 'foundation_image',
+    ) ) );
+
+    //Custom Connect
+    $wp_customize->add_section( 'foundation_connect' , array(
+        'title'       => __( 'Social Connect', 'foundation' ),
+        'priority'    => 60,
+        'description' => 'Add Twitter and Facebook urls',
+    ) );
+
+    $wp_customize->add_setting( 'foundation_connect_twitter' );
+
+    $wp_customize->add_control( 'foundation_connect_twitter',
+    	array(
+        'label'    => __( 'Connect Twitter', 'foundation' ),
+        'section'  => 'foundation_connect',
+        'settings' => 'foundation_connect_twitter',
+        'type' => 'text',
+    ) );
+
+    $wp_customize->add_setting( 'foundation_connect_facebook' );
+
+    $wp_customize->add_control( 'foundation_connect_facebook',
+    	array(
+        'label'    => __( 'Connect Facebook', 'foundation' ),
+        'section'  => 'foundation_connect',
+        'settings' => 'foundation_connect_facebook',
+        'type' => 'text',
+    ) );
+
+    //Custom Footer
+    $wp_customize->add_section( 'foundation_custom_footer' , array(
+        'title'       => __( 'Custom Footer Text', 'foundation' ),
+        'priority'    => 60,
+        'description' => 'Add your custom footer text here',
+    ) );
+
+    $wp_customize->add_setting( 'custom_footer' );
+
+    $wp_customize->add_control( 'custom_footer',
+    	array(
+        'label'    => __( 'Custom Footer Text', 'foundation' ),
+        'section'  => 'foundation_custom_footer',
+        'settings' => 'custom_footer',
+        'type' => 'text',
+    ) );
+
+}
+add_action('customize_register', 'foundation_theme_customizer');
