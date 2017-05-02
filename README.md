@@ -19,8 +19,8 @@ The Sass is compiled using libsass, which requires the GCC to be installed on yo
 ### 1. Clone the repository and install with npm
 ```bash
 $ cd my-wordpress-folder/wp-content/themes/
-$ git clone https://jamzth@bitbucket.org/jamzth/foundation-theme.git
-$ cd foundation
+$ git clone https://jamzth@bitbucket.org/jamzth/foundationtheme.git
+$ cd foundationtheme
 $ npm install
 ```
 
