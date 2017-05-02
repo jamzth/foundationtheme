@@ -1,4 +1,4 @@
-# Foundation
+# FoundationTheme
 
 This is a starter-theme for WordPress based on Foundation 6, the most advanced responsive (mobile-first) framework in the world. The purpose of Foundation, is to act as a small and handy toolbox that contains the essentials needed to build any design. Foundation Theme is meant to be a starting point, not the final product.
 
