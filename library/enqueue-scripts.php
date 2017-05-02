@@ -5,12 +5,12 @@
  * Learn more about enqueue_script: {@link https://codex.wordpress.org/Function_Reference/wp_enqueue_script}
  * Learn more about enqueue_style: {@link https://codex.wordpress.org/Function_Reference/wp_enqueue_style }
  *
- * @package FoundationPress
- * @since FoundationPress 1.0.0
+ * @package FoundationTheme
+ * @since FoundationTheme 1.0.0
  */
 
-if ( ! function_exists( 'foundationpress_scripts' ) ) :
-	function foundationpress_scripts() {
+if ( ! function_exists( 'foundationtheme_scripts' ) ) :
+	function foundationtheme_scripts() {
 
 	// Enqueue the main Stylesheet.
 	wp_enqueue_style( 'main-stylesheet', get_template_directory_uri() . '/assets/stylesheets/foundation.css', array(), '2.9.2', 'all' );
@@ -32,5 +32,5 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 
 	}
 
-	add_action( 'wp_enqueue_scripts', 'foundationpress_scripts' );
+	add_action( 'wp_enqueue_scripts', 'foundationtheme_scripts' );
 endif;

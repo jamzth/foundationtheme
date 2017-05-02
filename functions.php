@@ -1,17 +1,17 @@
 <?php
 /**
- * Author: Ole Fredrik Lie
- * URL: http://olefredrik.com
+ * Author: James Hammack
+ * URL: https://james.hammack.us
  *
- * FoundationPress functions and definitions
+ * FoundationTheme functions and definitions
  *
  * Set up the theme and provides some helper functions, which are used in the
  * theme as custom template tags. Others are attached to action and filter
  * hooks in WordPress to change core functionality.
  *
  * @link https://codex.wordpress.org/Theme_Development
- * @package FoundationPress
- * @since FoundationPress 1.0.0
+ * @package FoundationTheme
+ * @since FoundationTheme 1.0.0
  */
 
 /** Various clean up functions */
@@ -21,14 +21,14 @@ require_once( 'library/cleanup.php' );
 require_once( 'library/foundation.php' );
 
 /** Format comments */
-require_once( 'library/class-foundationpress-comments.php' );
+require_once( 'library/class-foundationtheme-comments.php' );
 
 /** Register all navigation menus */
 require_once( 'library/navigation.php' );
 
 /** Add menu walkers for top-bar and off-canvas */
-require_once( 'library/class-foundationpress-top-bar-walker.php' );
-require_once( 'library/class-foundationpress-mobile-walker.php' );
+require_once( 'library/class-foundationtheme-top-bar-walker.php' );
+require_once( 'library/class-foundationtheme-mobile-walker.php' );
 
 /** Create widget areas in sidebar and footer */
 require_once( 'library/widget-areas.php' );
@@ -52,7 +52,7 @@ require_once( 'library/sticky-posts.php' );
 require_once( 'library/responsive-images.php' );
 
 /** If your site requires protocol relative url's for theme assets, uncomment the line below */
-// require_once( 'library/class-foundationpress-protocol-relative-theme-assets.php' );
+// require_once( 'library/class-foundationtheme-protocol-relative-theme-assets.php' );
 
 /** Add Customizer Options */
 function foundation_theme_customizer( $wp_customize ) {

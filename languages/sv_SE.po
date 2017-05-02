@@ -238,8 +238,8 @@ msgid "FoundationPress"
 msgstr "FoundationPress"
 
 #. Theme URI of the plugin/theme
-msgid "http://foundationpress.olefredrik.com"
-msgstr "http://foundationpress.olefredrik.com"
+msgid "http://foundationtheme.olefredrik.com"
+msgstr "http://foundationtheme.olefredrik.com"
 
 #. Description of the plugin/theme
 msgid ""

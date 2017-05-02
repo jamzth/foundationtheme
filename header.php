@@ -4,8 +4,8 @@
  *
  * Displays all of the head element and everything up until the "container" div.
  *
- * @package FoundationPress
- * @since FoundationPress 1.0.0
+ * @package FoundationTheme
+ * @since FoundationTheme 1.0.0
  */
 
 ?>
@@ -17,18 +17,18 @@
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
-	<?php do_action( 'foundationpress_after_body' ); ?>
+	<?php do_action( 'foundationtheme_after_body' ); ?>
 
 	<?php if ( get_theme_mod( 'wpt_mobile_menu_layout' ) === 'offcanvas' ) : ?>
 	<div class="off-canvas-wrapper">
 		<?php get_template_part( 'template-parts/mobile-off-canvas' ); ?>
 	<?php endif; ?>
 
-	<?php do_action( 'foundationpress_layout_start' ); ?>
+	<?php do_action( 'foundationtheme_layout_start' ); ?>
 
 	<header id="masthead" class="site-header" role="banner">
-		<div class="title-bar" <?php foundationpress_title_bar_responsive_toggle() ?>>
-			<button class="menu-icon" type="button" data-toggle="<?php foundationpress_mobile_menu_id(); ?>"></button>
+		<div class="title-bar" <?php foundationtheme_title_bar_responsive_toggle() ?>>
+			<button class="menu-icon" type="button" data-toggle="<?php foundationtheme_mobile_menu_id(); ?>"></button>
 			<div class="title-bar-title">
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 			</div>
@@ -41,7 +41,7 @@
 				</ul>
 			</div>
 			<div class="top-bar-right">
-				<?php foundationpress_top_bar_r(); ?>
+				<?php foundationtheme_top_bar_r(); ?>
 
 				<?php if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) === 'topbar' ) : ?>
 					<?php get_template_part( 'template-parts/mobile-top-bar' ); ?>
@@ -51,4 +51,4 @@
 	</header>
 
 	<section class="container">
-		<?php do_action( 'foundationpress_after_header' );
+		<?php do_action( 'foundationtheme_after_header' );
